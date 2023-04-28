@@ -1,17 +1,26 @@
 import React,{useState} from 'react'
 import './CreateQuiz.css'
+import { useNavigate } from 'react-router-dom';
+
 
 const CreateQuiz = () => {
 
+    const navigate = useNavigate();
+    const[nav, setNav] = useState(false);
     const[user,setUser]= useState({
       name: "",
       description: "",
       points: "",
       time: ""
     });
-     
+     const navHandler = (e)=>{
+      postData(e)
+      setNav(true)
+      nav?navigate('/quiz'):navigate('/')
+     }
     let name,value;
     const getUserData=(event)=>{
+      event.preventDefault();
     name= event.target.name;
     value=event.target.value;
 
@@ -23,7 +32,7 @@ const CreateQuiz = () => {
 
     const postData = async(e)=>{
      e.preventDefault();
-
+      console.log("Post data run: ",user)
      const {name ,description , points , time,} = user;
 
      if((name && description && points && time)){
@@ -51,6 +60,9 @@ const CreateQuiz = () => {
           time: ""
           })
           alert("Data stored successfully");
+          
+          nav?navigate('/quiz'):navigate('/')
+
         }
 
      }else{
@@ -90,7 +102,7 @@ const CreateQuiz = () => {
       />
       </div>
 
-      <button type="submit" onClick={postData}>Create Quiz</button>
+      <button type="submit" onClick={navHandler}>Create Quiz</button>
     </form>
      
     </>
