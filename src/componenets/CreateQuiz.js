@@ -68,7 +68,7 @@ const CreateQuiz = () => {
      }else{
       alert("All fields are required");
      }
-  
+      
     }
     
   return (
