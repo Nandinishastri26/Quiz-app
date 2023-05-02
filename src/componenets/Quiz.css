@@ -34,7 +34,7 @@
 #que-txt {
   font-size: 1.2em;
   display: inline-block;
-}*/
+}
 
 .options {
   display: flex;
@@ -49,15 +49,24 @@
   cursor: pointer;
   width: 6rem;
   border-radius: 1rem;
+  
 }
+
 .checked{
   background-color: rgb(114, 70, 142);
   color:white;
   box-shadow: 3px 3px 4px 1px rgb(78, 69, 78);
 }
 .show-score{
-  position: absolute;
+  
   top:30%;
   font-size: 40px;
   text-align: center;  
 }
+
+
+
+
+
+
+
