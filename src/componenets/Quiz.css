@@ -1,0 +1,63 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  position: relative;
+}
+
+.heading {
+  margin-top: 5rem;
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: large;
+}
+
+#que-no {
+  font-size: 1.2em;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+#que-txt {
+  font-size: 1.2em;
+  display: inline-block;
+}*/
+
+.options {
+  display: flex;
+  margin-top: 5px;
+  padding: 5px;
+  cursor: pointer;
+  min-height: 30px;
+}
+
+#next-btn{
+  padding: 7px;
+  cursor: pointer;
+  width: 6rem;
+  border-radius: 1rem;
+}
+.checked{
+  background-color: rgb(114, 70, 142);
+  color:white;
+  box-shadow: 3px 3px 4px 1px rgb(78, 69, 78);
+}
+.show-score{
+  position: absolute;
+  top:30%;
+  font-size: 40px;
+  text-align: center;  
+}

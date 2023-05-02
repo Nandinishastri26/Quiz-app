@@ -16,7 +16,7 @@ const CreateQuiz = () => {
      const navHandler = (e)=>{
       postData(e)
       setNav(true)
-      nav?navigate('/quiz'):navigate('/')
+      //nav?navigate('/quiz'):navigate('/')
      }
     let name,value;
     const getUserData=(event)=>{
